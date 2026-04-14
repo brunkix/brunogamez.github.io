@@ -1,0 +1,25 @@
+{
+  "name": "brunogamez.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brunkix/css.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/brunkix/css/issues"
+  },
+  "homepage": "https://github.com/brunkix/css#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
