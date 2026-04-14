@@ -1,0 +1,130 @@
+/* Limpieza inicial para evitar el desbordamiento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita que el menú lateral cree scroll horizontal */
+}
+
+header {
+    background-color: #000000;
+}
+
+/* LA NAVBAR: Aquí ocurre la magia de la separación */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo izquierda, Links centro, Acciones derecha */
+    align-items: center;
+    padding: 15px 5%;
+    min-height: 70px;
+}
+
+.logo-navbar {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Estilo de los links en escritorio */
+.links-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 60px;
+}
+
+/* CORRECCIÓN AQUÍ: Cambié .nav-menu por .links-nav para que el color blanco funcione */
+.links-nav a {
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 25px;
+    color: white; /* Ahora sí se aplicará el color */
+}
+
+.navbar .links-nav a:hover {
+    color: #01053a;
+    transition: 0.3s;
+}
+
+/* Grupo de la derecha (Buscador + Login + Hamburguesa) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-bar {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-login {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Estilo del botón hamburguesa */
+.hamburger {
+    display: none; /* Se oculta en PC */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/* MEDIA QUERIES PARA HACERLO RESPONSIVE */
+
+/* --- MÓVIL (Menú Hamburguesa) --- */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Aparece solo en celular */
+    }
+
+    /* El buscador se oculta en móvil para que no choque con todo */
+    .search-bar {
+        display: none;
+    }
+
+    /* Transformamos los links en un panel lateral */
+    .links-nav {
+        position: fixed;
+        right: -100%; /* Escondido a la derecha */
+        top: 70px; /* Debajo de la barra principal */
+        background-color: #222;
+        width: 70%;
+        height: calc(100vh - 70px);
+        transition: 0.4s ease-in-out;
+        z-index: 100;
+    }
+
+    /* Cuando el menú esté activo lo movemos a la vista */
+    .links-nav.active {
+        right: 0;
+    }
+
+    .links-nav ul {
+        flex-direction: column; /* Links uno debajo del otro */
+        align-items: center;
+        padding-top: 50px;
+    }
+}
