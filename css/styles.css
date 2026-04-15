@@ -34,7 +34,7 @@ header {
 .links-nav ul {
     display: flex;
     list-style: none;
-    gap: 60px;
+    gap: 20px;
 }
 
 /* CORRECCIÓN AQUÍ: Cambié .nav-menu por .links-nav para que el color blanco funcione */
@@ -58,7 +58,7 @@ header {
 }
 
 .search-bar {
-    padding: 5px 10px;
+    padding: 8px 10px;
     border: none;
     border-radius: 20px;
     outline: none;
@@ -92,10 +92,163 @@ header {
     transition: 0.3s;
 }
 
+/* Estilos para la sección hero o banner */
+
+.hero {
+    background-image: url('/assets/img/hero-bg.webp');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.featured-games {
+    padding: 40px 5%;
+}
+
+
+.featured-games h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* Estilos para las tarjetas de juegos */
+/* Mejoras en la tarjeta de juego */
+.game-card {
+    width: 350px; /* Un poco más estrecha para que quepan más en pantalla */
+    height: auto; /* Dejamos que el contenido mande, o usa un min-height */
+    min-height: 500px;
+    background-color: #1a1a1a; /* Un negro más profundo */
+    border-radius: 15px;
+    overflow: hidden;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #333;
+}
+
+.game-card:hover {
+    transform: translateY(-10px); /* Efecto de levitación */
+    box-shadow: 0 10px 20px rgba(255, 69, 0, 0.2); /* Sombra con el color de tu marca */
+}
+
+/* Imagen más alta para que luzca el arte del juego */
+.game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.game-card .game-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Empuja el botón hacia abajo */
+}
+
+.categoria {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ff4500; /* Color naranja/rojo gamer */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* TÍTULO */
+.game-card .game-info h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+/* PÁRRAFO JUSTIFICADO CON TRUCO DE LÍMITES */
+.game-card .game-info p {
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.6;
+    text-align: justify; /* AQUÍ ESTÁ EL JUSTIFICADO */
+    hyphens: auto; /* Ayuda a que las palabras se corten con guiones si es necesario */
+    
+    /* Esto hace que si el texto es muy largo, se corte con "..." después de 5 líneas */
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* LA RAYA (HR) */
+hr {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #444, transparent);
+    margin: 20px 0;
+}
+
+/* SECCIÓN INFERIOR (Botón) */
+.seccion-descargar {
+    margin-top: auto; /* Empuja esto al puro fondo de la carta */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #fff;
+    color: #ff4500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* MEDIA QUERIES PARA HACERLO RESPONSIVE */
 
 /* --- MÓVIL (Menú Hamburguesa) --- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .hamburger {
         display: flex; /* Aparece solo en celular */
     }
