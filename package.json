@@ -2,9 +2,10 @@
   "name": "brunogamez.github.io",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "/index.js",
+  "type": "module",
   "scripts": {
-    "start": "node app.js",
+    "dev": "nodemon --exec node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,13 @@
   },
   "homepage": "https://github.com/brunkix/css#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }

@@ -1,0 +1,295 @@
+/* Limpieza inicial para evitar el desbordamiento */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Evita que el menú lateral cree scroll horizontal */
+}
+
+header {
+    background-color: #000000;
+}
+
+/* LA NAVBAR: Aquí ocurre la magia de la separación */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Logo izquierda, Links centro, Acciones derecha */
+    align-items: center;
+    padding: 15px 5%;
+    min-height: 70px;
+}
+
+.logo-navbar {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Estilo de los links en escritorio */
+.links-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+/* CORRECCIÓN AQUÍ: Cambié .nav-menu por .links-nav para que el color blanco funcione */
+.links-nav a {
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 25px;
+    color: white; /* Ahora sí se aplicará el color */
+}
+
+.navbar .links-nav a:hover {
+    color: #ff0000;
+    transition: 0.3s;
+}
+
+/* Grupo de la derecha (Buscador + Login + Hamburguesa) */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-bar {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+}
+
+.btn-login {
+    padding: 5px 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Estilo del botón hamburguesa */
+.hamburger {
+    display: none; /* Se oculta en PC */
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+/*login*/
+.form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 10px;
+    color: white;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container label {
+    font-size: 14px;
+}
+
+.form-container input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+.form-container button, input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff4500;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.form-container button:hover, input[type="submit"]:hover {
+    background-color: #e03e00;
+    transition: 0.3s;
+}
+
+.form-container-a p {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    gap: 10px;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.form-container-a a {
+    text-align: center;
+    margin-top: 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    gap: 10px;
+    align-items: center;
+    color: #ff4500;
+    text-decoration: none;
+}
+
+/*footer*/
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column; /* Apila el contenedor y el copyright */
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Espacio igual entre bloques */
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Para que en celulares se acomode solo */
+    gap: 30px;
+}
+
+.footer-block {
+    display: flex;
+    flex-direction: column; /* Esto hace que los links vayan uno debajo de otro */
+    gap: 10px;
+    min-width: 200px;
+}
+
+.footer-block h4 {
+    color: #ff4500; /* Color naranja gamer para resaltar */
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.footer-block a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-block a:hover {
+    color: #ff4500;
+    padding-left: 5px; /* Efecto sutil al pasar el mouse */
+}
+
+.footer-social-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES PARA HACERLO RESPONSIVE */
+
+/* --- MÓVIL (Menú Hamburguesa) --- */
+@media (max-width: 900px) {
+    .hamburger {
+        display: flex; /* Aparece solo en celular */
+    }
+
+    /* El buscador se oculta en móvil para que no choque con todo */
+    .search-bar {
+        display: none;
+    }
+
+    /* Transformamos los links en un panel lateral */
+    .links-nav {
+        position: fixed;
+        right: -100%; /* Escondido a la derecha */
+        top: 70px; /* Debajo de la barra principal */
+        background-color: #222;
+        width: 70%;
+        height: calc(100vh - 70px);
+        transition: 0.4s ease-in-out;
+        z-index: 100;
+    }
+
+    /* Cuando el menú esté activo lo movemos a la vista */
+    .links-nav.active {
+        right: 0;
+    }
+
+    .links-nav ul {
+        flex-direction: column; /* Links uno debajo del otro */
+        align-items: center;
+        padding-top: 50px;
+    }
+}

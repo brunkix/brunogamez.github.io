@@ -1,0 +1,18 @@
+[
+  {
+    "id": "el-reino-perdido",
+    "titulo": "El Reino Perdido",
+    "categoria": "Aventura",
+    "descripcion": "Explora un mundo mágico lleno de misterios y desafíos...",
+    "imagen": "/assets/img/reino.webp",
+    "linkDescarga": "https://mega.nz/..."
+  },
+  {
+    "id": "valorant-indie",
+    "titulo": "Pixel Valorant",
+    "categoria": "Shooter",
+    "descripcion": "Una versión táctica en 2D de tu shooter favorito...",
+    "imagen": "/assets/img/valorant.webp",
+    "linkDescarga": "https://mediafire.com/..."
+  }
+]
