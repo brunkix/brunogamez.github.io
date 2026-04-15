@@ -134,9 +134,25 @@ header {
     font-weight: bold;
     margin-top: 20px;
     text-decoration: none;
+
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    color: #fff;
+    transform: scale(1.1);
+    transition: 0.3s ease;
 }
 
 /* Estilos para las tarjetas de juegos */
+
+.game-cards {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a la pantalla */
+    justify-content: center; /* Centra las tarjetas en la sección */
+}
+
 /* Mejoras en la tarjeta de juego */
 .game-card {
     width: 350px; /* Un poco más estrecha para que quepan más en pantalla */
@@ -233,10 +249,75 @@ hr {
     color: #ff4500;
 }
 
+/*footer*/
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column; /* Apila el contenedor y el copyright */
+    align-items: center;
+}
 
+.footer-container {
+    display: flex;
+    justify-content: space-around; /* Espacio igual entre bloques */
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Para que en celulares se acomode solo */
+    gap: 30px;
+}
 
+.footer-block {
+    display: flex;
+    flex-direction: column; /* Esto hace que los links vayan uno debajo de otro */
+    gap: 10px;
+    min-width: 200px;
+}
 
+.footer-block h4 {
+    color: #ff4500; /* Color naranja gamer para resaltar */
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
 
+.footer-block a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-block a:hover {
+    color: #ff4500;
+    padding-left: 5px; /* Efecto sutil al pasar el mouse */
+}
+
+.footer-social-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.copyright {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #888;
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
 
 
 
